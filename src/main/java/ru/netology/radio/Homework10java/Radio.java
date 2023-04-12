@@ -49,13 +49,13 @@ public class Radio {
         soundVolume = newSoundVolume;
     }
 
-    public void upVolume() {
+    public void upSoundVolume() {
         if (soundVolume < 100) {
             soundVolume++;
         }
     }
 
-    public void downVolume() {
+    public void downSoundVolume() {
         if (soundVolume > 0) {
             soundVolume--;
         }
