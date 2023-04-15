@@ -41,6 +41,14 @@ public class RadioTest {
         int actual = rad.getCurrentRadioStation();
         Assertions.assertEquals(actual, expected);
     }
+    @Test
+    public void currentRadioStation() {
+        Radio rad = new Radio(20);
+        rad.setCurrentRadioStation(18);
+        int expected = 18;
+        int actual = 18;
+        Assertions.assertEquals(actual, expected);
+    }
 
     // Методы next  и prev
     @Test
