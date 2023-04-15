@@ -41,6 +41,7 @@ public class RadioTest {
         int actual = rad.getCurrentRadioStation();
         Assertions.assertEquals(actual, expected);
     }
+
     @Test
     public void currentRadioStation() {
         Radio rad = new Radio(20);
@@ -162,7 +163,6 @@ public class RadioTest {
     public void upSoundVolume1() {
         Radio rad = new Radio();
         rad.setSoundVolume(0);
-        rad.upSoundVolume();
         int expected = 1;
         int actual = rad.getSoundVolume();
         Assertions.assertEquals(expected, actual);
@@ -172,7 +172,7 @@ public class RadioTest {
     public void upSoundVolume2() {
         Radio rad = new Radio();
         rad.setSoundVolume(99);
-        rad.upSoundVolume();
+
         int expected = 100;
         int actual = rad.getSoundVolume();
         Assertions.assertEquals(expected, actual);
@@ -182,7 +182,6 @@ public class RadioTest {
     public void upSoundVolume3() {
         Radio rad = new Radio();
         rad.setSoundVolume(100);
-        rad.upSoundVolume();
         int expected = 100;
         int actual = rad.getSoundVolume();
         Assertions.assertEquals(expected, actual);
@@ -193,7 +192,6 @@ public class RadioTest {
     public void downSoundVolume1() {
         Radio rad = new Radio();
         rad.setSoundVolume(100);
-        rad.downSoundVolume();
         int expected = 99;
         int actual = rad.getSoundVolume();
         Assertions.assertEquals(expected, actual);
@@ -203,7 +201,6 @@ public class RadioTest {
     public void downSoundVolume2() {
         Radio rad = new Radio();
         rad.setSoundVolume(1);
-        rad.downSoundVolume();
         int expected = 0;
         int actual = rad.getSoundVolume();
         Assertions.assertEquals(expected, actual);
@@ -213,7 +210,6 @@ public class RadioTest {
     public void downSoundVolume3() {
         Radio rad = new Radio();
         rad.setSoundVolume(0);
-        rad.downSoundVolume();
         int expected = 0;
         int actual = rad.getSoundVolume();
         Assertions.assertEquals(expected, actual);

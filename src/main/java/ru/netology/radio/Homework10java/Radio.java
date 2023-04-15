@@ -1,24 +1,33 @@
 package ru.netology.radio.Homework10java;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
 
     private int currentRadioStation;
     private int soundVolume;
-    private int maxStation;
-    private int minStation;
-    private int maxVolume;
-    private int minVolume;
+    private int maxStation = 9;
+    private int minStation = 0;
+    private int maxVolume = 100;
+    private int minVolume = 0;
 
-    public Radio (){
-        this.maxStation = 9;
-        this.minStation = 0;
-        this.maxVolume = 100;
-        this.minVolume = 0;
-    }
-
-    public Radio (int stationsCount){
+    //    public Radio (){
+//        this.maxStation = 9;
+//        this.minStation = 0;
+//        this.maxVolume = 100;
+//        this.minVolume = 0;
+//    }
+//
+    public Radio(int stationsCount) {
         this.maxStation = maxStation - 1;
     }
+
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
@@ -75,5 +84,4 @@ public class Radio {
         }
     }
 }
-
 
